@@ -1,4 +1,4 @@
-package com.example.notekeeper.persistence
+package com.example.notekeeper.data.persistence
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

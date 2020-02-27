@@ -33,4 +33,7 @@ data class Note(
         if (content != other.content) return false
         return true
     }
+
 }
+
+data class ErrorResponse(var errorMsg:String?)

@@ -2,10 +2,10 @@ package com.example.notekeeper.di
 
 import android.app.Application
 import androidx.room.Room
-import com.example.notekeeper.persistence.NoteDao
-import com.example.notekeeper.persistence.NoteDatabase
-import com.example.notekeeper.persistence.NoteDatabase.Companion.DATABASE_NAME
-import com.example.notekeeper.repository.NoteRepository
+import com.example.notekeeper.data.persistence.NoteDao
+import com.example.notekeeper.data.persistence.NoteDatabase
+import com.example.notekeeper.data.persistence.NoteDatabase.Companion.DATABASE_NAME
+import com.example.notekeeper.data.repository.NoteRepository
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

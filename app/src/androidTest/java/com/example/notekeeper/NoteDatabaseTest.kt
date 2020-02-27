@@ -2,8 +2,8 @@ package com.example.notekeeper
 
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
-import com.example.notekeeper.persistence.NoteDao
-import com.example.notekeeper.persistence.NoteDatabase
+import com.example.notekeeper.data.persistence.NoteDao
+import com.example.notekeeper.data.persistence.NoteDatabase
 import org.junit.After
 import org.junit.Before
 

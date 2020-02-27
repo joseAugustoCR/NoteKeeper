@@ -1,6 +1,6 @@
 package com.example.daggersample.di
 
-import com.example.notekeeper.NotesActivity
+import com.example.notekeeper.ui.noteslist.NotesActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
