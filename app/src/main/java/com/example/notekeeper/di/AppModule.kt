@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.example.notekeeper.persistence.NoteDao
 import com.example.notekeeper.persistence.NoteDatabase
 import com.example.notekeeper.persistence.NoteDatabase.Companion.DATABASE_NAME
+import com.example.notekeeper.repository.NoteRepository
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -33,5 +34,11 @@ import javax.inject.Singleton
             return noteDatabase.noteDao()
         }
 
+        @Singleton
+        @Provides
+        @JvmStatic
+        fun provideNoteRepository(noteDao: NoteDao) : NoteRepository{
+            return NoteRepository(noteDao)
+        }
     }
 }

@@ -6,11 +6,12 @@ import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
+import org.jetbrains.annotations.NotNull
 
 @Parcelize
 @Entity(tableName = "notes")
 data class Note(
-    @PrimaryKey(autoGenerate = true) val id:Int = 0,
+    @PrimaryKey(autoGenerate = true) var id:Int = 0,
     @NonNull var title:String = "",
     var content:String?=null,
     var timestamp:String?=null
