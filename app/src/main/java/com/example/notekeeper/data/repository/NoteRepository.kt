@@ -31,7 +31,11 @@ class NoteRepository @Inject constructor(val noteDao: NoteDao) {
         return  noteDao.insertNote(note)
             .delaySubscription(timeDelay, timeUnit)
             .map {
-                return@map Resource.success(it.toInt())
+                if(it > 0) {
+                    return@map Resource.success(it.toInt())
+                }else{
+                    return@map Resource.error<Int>()
+                }
 
             }
             .onErrorReturn {

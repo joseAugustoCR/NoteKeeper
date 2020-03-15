@@ -36,4 +36,4 @@ data class Note(
 
 }
 
-data class ErrorResponse(var errorMsg:String?)
+data class ErrorResponse(var errorMsg:String?="")

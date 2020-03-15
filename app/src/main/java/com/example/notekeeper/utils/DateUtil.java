@@ -2,6 +2,7 @@ package com.example.notekeeper.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class DateUtil {
 
@@ -14,7 +15,7 @@ public class DateUtil {
 
     public static String getCurrentTimeStamp() throws Exception {
         try {
-            SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT); //MUST USE LOWERCASE 'y'. API 23- can't use uppercase
+            SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT, Locale.getDefault()); //MUST USE LOWERCASE 'y'. API 23- can't use uppercase
             return dateFormat.format(new Date()); // Find todays date
         } catch (Exception e) {
             e.printStackTrace();
